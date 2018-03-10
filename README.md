@@ -16,4 +16,3 @@ To solve this challenge, build a web application or web page that provides:
 * Crime correlation: Based on the type of dispatch and the frequency of dispatch, show the most calm and safe neighborhoods in the city
 * Preparing for the future: Which areas are experiencing the greatest increase in dispatch calls? Where and what type of dispatch service would you place to help with the rate of increasing calls?
 
-Build app
