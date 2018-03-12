@@ -26,15 +26,12 @@
     mapboxgl.accessToken = 'pk.eyJ1Ijoia2FydGlrdGVubmlzIiwiYSI6ImNqZW01dWY0ajAwOGYzMHBsMGlsYXZvNDMifQ.6RYhKUID2mkBoX3YFO3tTQ'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/kartiktennis/cjeopwdlo48xx2rqwui738hqb' // replace this with your style URL
+      style: 'mapbox://styles/kartiktennis/cjeoi5i7kd2kl2qqqifgz8jz8' // replace this with your style URL
     });
     // code from the next step will go here
     map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['location-coordinates'], 
-    layers: ['structure-fires'], 
-    layers: ['alarms'],
-    layers: ['miscellaneous'] // replace this with the name of the layer
+    layers: ['Structure Fire Layer'] // replace this with the name of the layer
   });
 
   if (!features.length) {
@@ -43,11 +40,10 @@
 
   var feature = features[0];
 
-
-  //not sure if the popups will display - doesnt matter too much 
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.latitude, feature.geometry.longitude)
-    .setHTML('<h3>' + feature.properties.call_type + '</h3><p>' + feature.properties.latitude + '</p>' + feature.properties.longitude)
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.call_type + '</h3><p>' + feature.properties.StreetAddress + '</p>')
+    .setLngLat(feature.geometry.coordinates)
     .addTo(map);
 });
     </script>

@@ -23,8 +23,8 @@
               obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
             }
     </script>
-
 </head>
+
 <body>
     <!--title bar of page-->
     <section class="hero is-primary has-text-centered">
@@ -34,12 +34,12 @@
                 <h2 class="subtitle">San Francisco Police Department Data Analysis</h2>
             </div>
         </div>
-    </section>
-    
- <!-- divide page into blocks to display different graph visualizations--> 
+    </section>    
+
+    <!--two graphs for data visualizatinos-->
         <div class="section group">
                 <div>
-                    <div id="graph-box" class="box is-fluid">
+                    <div id="graph-box" class="box is-fluid ">
                         <div class="has-text-centered">
                             <h1 class="title is-2">Updated SFPD Data</h1>
                             <!--call type vs number of occurrences-->
@@ -48,19 +48,36 @@
                     </div>
             </div>
         </div>  
-<!--create map with mapbox-->
+
+<!--create map with mapbox for data visualization-->
 <div class="section group">
         <div>
         <div id="graph-box" class="box is-fluid">
-                <div class="has-text-centered">
-                    <h1 class="title is-2">Location vs Incident Type</h1>
+            <!--left half of box element--> 
+                <div class="has-text-left">
+                    <h1 class="title is-2">Location & Incident Type</h1>
                     <!--call type vs number of occurrences-->
-                    <iframe src="map.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" width="1800" height="650" style=" border:none; margin:0; bottom:0; overflow:hidden; z-index:999999;">
+                    <iframe src="map.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" width="50%" height="650" style=" border:none; margin:0; bottom:0; overflow:hidden; z-index:999999;">
                             Sorry, your browser does not support inline frames.
                     </iframe>
                 </div>
+
         </div>
-    </div>
 </div>
+
+
+<!--structue fire map popup modify for popup later-->  
+    <div class="section group">
+             <div>
+            <div id="graph-box" class="box is-fluid">
+                    <div class="has-text-centered">
+                        <h1 class="title is-2">Largest Avg Dispatch times (#1): Structure Fire Areas</h1>
+                        <!--call type vs number of occurrences-->
+                        <iframe src="popupFiremap.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" width="1800" height="650" style=" border:none; margin:0; bottom:0; overflow:hidden; z-index:999999;">
+                                Sorry, your browser does not support inline frames.
+                        </iframe>
+                    </div>
+            </div>
+    </div> 
 </body>
 </html>
