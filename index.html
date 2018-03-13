@@ -26,28 +26,40 @@
 
 <body>
     <!--title bar of page-->
-                    <section class="hero is-primary has-text-centered">
-                        <div class="hero-body">
-                            <div class="container has-text-centered">
-                                <h1 class="title is-primary">2018 Capital One Software Engineering Summit</h1>
-                                <h2 class="subtitle">San Francisco Police Department Data Analysis</h2>
-                            </div>
-                        </div>
-                    </section>    
-                    <!--create map with mapbox for data visualization-->
+                <div>
+                    <div>
+                        <iframe src="toggleLayersMap.html" frameborder="0" scrolling="no" width="100%" height="800" style=" border:none; margin:0; bottom:0; overflow:hidden; z-index:999999;">
+                                Sorry, your browser does not support inline frames.
+                        </iframe>
+                    </div> 
+                </div>
                     <div class="section group">
-                                            <!--use column class to divide up elements--> 
+                         <!--use column class to divide up elements--> 
                         <div class="columns"> 
                             <div class="column is-half is-fluid">
-                                <div>
-                                        <h1 class="title is-2">Location & Incident Type Map</h1>
-                                        <!--call type vs number of occurrences-->
-                                        <iframe src="toggleLayersMap.html" frameborder="0" scrolling="no" width="100%" height="650" style=" border:none; margin:0; bottom:0; overflow:hidden; z-index:999999;">
-                                                Sorry, your browser does not support inline frames.
-                                        </iframe>
-                                    </div> 
+                                    <h1 class="title is-2">How Safe is your area?</h1>
+                                    <div class="box">
+                                        <div class="field">
+                                                <label class="label">Latitude</label>
+                                                <div class="control has-icons-left has-icons-right">
+                                                <input class="input is-success" type="text" placeholder="Latitude">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-location-arrow"></i>
+                                                </span>
+                                                </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label">Longitude</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                <input class="input is-success" type="text" placeholder="Longitude">
+                                                <span class="icon is-small is-left">
+                                                <i class="fas fa-location-arrow"></i>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    </div>
                             </div>
-                            <!--additional data next to location incident map-->
+
                             <!--make these tiles buttons-->
                             <!--load icons for different tiles to represent the different incidents with longest dispatch times-->
                             <div class="column">
@@ -56,14 +68,13 @@
                                             <div class="tile is-vertical is-8">
                                             <div class="tile">
                                                 <div class="tile is-parent is-vertical">
-                                                    <!--show structure fire map on popup-->
-                                                <article class="tile is-child notification button is-primary">
+                                                <article class="tile is-child notification button is-outlined is-primary">
                                                         <figure class="image is-4by3">
                                                                 <img src="./Icons/structure_fire_icon.png">
                                                         </figure>
                                                 </article>
 
-                                                <article class="button tile is-child notification is-warning">
+                                                <article class="button tile is-child notification is-outlined is-warning">
                                                         <figure class="image is-4by3">
                                                                 <img src="./Icons/alarm_icon.png">
                                                         </figure>
@@ -72,13 +83,13 @@
                                                 </div>
                                                 <div class="tile is-parent is-vertical">
 
-                                                <article class="button tile is-child notification is-info">
+                                                <article class="button tile is-child notification is-outlined is-info">
                                                     <figure class="image is-4by3">
-                                                    <img src="./Icons/hospital_icon.png">
+                                                        <img src="./Icons/hospital_icon.png">
                                                     </figure>
                                                 </article>
 
-                                                        <article class="button tile is-child notification is-white is-outlined">
+                                                        <article class="button tile is-child notification is-outlined is-danger">
                                                         <figure class="image is-4by3">
                                                             <img src="./Icons/traffic_icon.png">
                                                         </figure>
@@ -88,7 +99,7 @@
                                             </div>
 
                                             <div class="tile is-parent">
-                                                <article class="button tile is-child notification is-danger">
+                                                <article class="button tile is-child notification is-outlined is-success">
                                                 <!--replace the dummy text with something-->
                                                 <p class="title">Wide tile</p>
                                                 <p class="subtitle">Aligned with the right tile</p>
@@ -98,54 +109,32 @@
                                                 </article>
                                             </div>
 
-                                            </div>
-                                            <div class="tile is-parent">
-                                            <article class="tile is-child notification is-offwhite has-text-centered">
-                                                <div class="content">
-                                                <p class="title">Map Legend</p>
-                                                </div>
-                                            </article>
-                                            </div>
-                                    </div>
+                                        </div>
+                                                <div class="tile is-parent">
+                                                <article class="tile is-child notification is-offwhite has-text-centered">
+                                                    <div class="content">
+                                                    <p class="title">Map Legend</p>
+                                                    </div>
+                                                </article>
+                                        </div>
+                                </div>
                         </div> 
                 </div>
-        </div>
-            <!--between graphs and map--> 
-            <div class="column"> 
-                <div class="column is-half"> 
-                    <h1 class="title is-2">How Safe is your area?</h1>
-                    <div class="box">
-                        <div class="field">
-                                <label class="label">Latitude</label>
-                                <div class="control has-icons-left has-icons-right">
-                                <input class="input is-success" type="text" placeholder="Latitude">
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-location-arrow"></i>
-                                </span>
-                                </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Longitude</label>
-                            <div class="control has-icons-left has-icons-right">
-                                <input class="input is-success" type="text" placeholder="Longitude">
-                                <span class="icon is-small is-left">
-                                <i class="fas fa-location-arrow"></i>
-                                </span>
-                        </div>
-                    </div>
-                </div>
             </div>
+
             <!--two graphs for data visualizatinos-->
             <div class="section group">
-                    <div>
-                        <div id="graph-box" class="box is-fluid ">
-                            <div class="has-text-centered">
-                                <h1 class="title is-2">Updated SFPD Data</h1>
-                                <!--call type vs number of occurrences-->
-                                <iframe  id="graph1" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/0"></iframe>
-                                <iframe  id="graph2" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/3"></iframe>                
-                        </div>
-                </div>
-            </div>  
+                <div>
+                    <div class="has-text-centered">
+                            <h1 class="title is-2">Updated SFPD Data</h1>
+                            <!--call type vs number of occurrences-->
+                            <iframe  id="graph1" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/0"></iframe>
+                            <iframe  id="graph2" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/3"></iframe>                
+                    </div>
+                </div> 
+            </div> 
+
     </body>
 </html>
+
+
