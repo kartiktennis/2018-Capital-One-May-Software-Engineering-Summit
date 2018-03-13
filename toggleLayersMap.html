@@ -64,12 +64,14 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2FydGlrdGVubmlzIiwiYSI6ImNqZW01dWY0ajAwOGYzMHBsMGlsYXZvNDMifQ.6RYhKUID2mkBoX3YFO3tTQ';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/kartiktennis/cjeopwdlo48xx2rqwui738hqb',
-    zoom: 15,
+    style: 'mapbox://styles/kartiktennis/cjeopwdlo48xx2rqwui738hqb', //mapbox style reference
+    zoom: 11.75,
     center: [-122.4194, 37.7749]
 });
 
-var toggleableLayerIds = [ 'medical-incident', 'structure-fires', 'alarms','miscellaneous' ];
+var toggleableLayerIds = [ 'medical-incident', 'structure-fires', 'alarms','miscellaneous' ]; //layer ids to toggle MUST MATCH EXACTLY!
+
+
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
