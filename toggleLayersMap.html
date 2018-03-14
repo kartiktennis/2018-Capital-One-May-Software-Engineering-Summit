@@ -3,9 +3,13 @@
 <head>
     <meta charset='utf-8' />
     <title>Show and hide layers</title>
+
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -22,6 +26,17 @@
         right: 10px;
         border-radius: 3px;
         width: 120px;
+        border: 1px solid rgba(0,0,0,0.4);
+        font-family: 'Open Sans', sans-serif;
+    }
+    #title-box {
+        opacity: 0.5;
+        position: absolute;
+        z-index: 1;
+        top: 40px;
+        right: 100px;
+        border-radius: 3px;
+        width:300px;
         border: 1px solid rgba(0,0,0,0.4);
         font-family: 'Open Sans', sans-serif;
     }
@@ -57,6 +72,16 @@
     }
 </style>
 
+<div id="title-box" class="box has-text-centered">
+    <h1 class="title"><strong>Incident Map</strong></h1>
+    <h2 class="subtitle"><strong>Click to toggle!</strong>
+        <span class="icon is-small is-right">
+            <i class="fas fa-angle-double-right"></i>
+        </span>
+    </h2>
+  
+</div> 
+
 <nav id="menu"></nav>
 <div id="map"></div>
 
@@ -65,7 +90,9 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2FydGlrdGVubmlzIiwiYSI6ImNqZW01dWY0ajAwOGYzM
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/kartiktennis/cjeopwdlo48xx2rqwui738hqb', //mapbox style reference
-    zoom: 11.75,
+    zoom: 13,
+    pitch: 45, // pitch in degrees
+    bearing: -36,
     center: [-122.4194, 37.7749]
 });
 
