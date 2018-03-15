@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+        <meta charset="utf-8" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Capital One SFPD Data Analysis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Capital One SFPD Data Analysis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Bulma CSS for presentability-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+        <!--Bulma CSS for presentability-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 
-    <!--Loaded Font Awesome Icons-->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <!--Loaded Font Awesome Icons-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-    <!--some basic css styling-->
-    <style>
-        h1{
-            text-decoration: underline; 
-        }
-    </style> 
-    <sciipt defer type="text/javascript" src="app.js"></script>
-    
+        <!--Vue js--> 
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+
+        
 </head>
 
 <body>
@@ -36,102 +32,60 @@
                          <!--use column class to divide up elements--> 
                         <div class="columns"> 
                             <div class="column is-half is-fluid">
-                                    <h1 class="title is-2">How Safe is your area?</h1>
-                                    <div class="box">
-                                        <div class="field">
-                                                <label class="label">Latitude</label>
-                                                <div class="control has-icons-left has-icons-right">
-                                                <input class="input is-success" type="text" placeholder="Latitude">
-                                                <span class="icon is-small is-left">
-                                                    <i class="fas fa-location-arrow"></i>
+                                    <!--http://sanfranguide.com/zip-codes/-->
+                                    <h1 class="title is-2"> <span class="icon">
+                                            <i class="fa fa-map-marker fa-1x"></i>
+                                    </span>  Longest Dispatch Times by Zipcode</h1>
+                                    <!--zipcode for longest dispatch areas-->
+                                    <div class="box level">
+                                        <div class="level left">
+                                                <span class="icon">
+                                                        <i class="fa fa-map-marker"></i>
                                                 </span>
-                                                </div>
+                                            <h1 class="title is-5 is-spaced">Hayes Valley (94102)</h1>
                                         </div>
-                                        <div class="field">
-                                            <label class="label">Longitude</label>
-                                            <div class="control has-icons-left has-icons-right">
-                                                <input class="input is-success" type="text" placeholder="Longitude">
-                                                <span class="icon is-small is-left">
-                                                <i class="fas fa-location-arrow"></i>
+                                    </div> 
+                                    <br></br>
+                                    <div class="box level">
+                                            <div class="level left">
+                                                <span class="icon">
+                                                        <i class="fa fa-map-marker"></i>
                                                 </span>
-                                        </div>
+                                                <h1 class="title is-5 is-spaced">Embarcadero South (94105)</h1>
+                                            </div>
                                     </div>
-                                    </div>
+                                    <br></br>
+                                    <div class="box level">
+                                            <div class="level left">
+                                                <span class="icon">
+                                                        <i class="fa fa-map-marker"></i>
+                                                </span>
+                                                <h1 class="title is-5 is-spaced">Presidio (94129)</h1>
+                                            </div>
+                                    </div> 
                             </div>
 
-                            <!--make these tiles buttons-->
-                            <!--load icons for different tiles to represent the different incidents with longest dispatch times-->
                             <div class="column">
-                                    <h1 class="title is-right is-2">Click Icons for areas with longest dispatch times!</h1>
-                                    <div class="tile is-ancestor">
-                                            <div class="tile is-vertical is-8">
-                                            <div class="tile">
-                                                <div class="tile is-parent is-vertical">
-                                                <article class="tile is-child notification button is-outlined is-primary">
-                                                        <figure class="image is-4by3">
-                                                                <img src="./Icons/structure_fire_icon.png">
-                                                        </figure>
-                                                </article>
-
-                                                <article class="button tile is-child notification is-outlined is-warning">
-                                                        <figure class="image is-4by3">
-                                                                <img src="./Icons/alarm_icon.png">
-                                                        </figure>
-                                                </article>
-
-                                                </div>
-                                                <div class="tile is-parent is-vertical">
-
-                                                <article class="button tile is-child notification is-outlined is-info">
-                                                    <figure class="image is-4by3">
-                                                        <img src="./Icons/hospital_icon.png">
-                                                    </figure>
-                                                </article>
-
-                                                        <article class="button tile is-child notification is-outlined is-danger">
-                                                        <figure class="image is-4by3">
-                                                            <img src="./Icons/traffic_icon.png">
-                                                        </figure>
-                                                        </article>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="tile is-parent">
-                                                <article class="button tile is-child notification is-outlined is-success">
-                                                <!--replace the dummy text with something-->
-                                                <p class="title">Wide tile</p>
-                                                <p class="subtitle">Aligned with the right tile</p>
-                                                <div class="content">
-                                                    <!-- Content -->
-                                                </div>
-                                                </article>
-                                            </div>
-
-                                        </div>
-                                                <div class="tile is-parent">
-                                                <article class="tile is-child notification is-offwhite has-text-centered">
-                                                    <div class="content">
-                                                    <p class="title">Map Legend</p>
-                                                    </div>
-                                                </article>
-                                        </div>
-                                </div>
-                        </div> 
+                                <!--description goes here-->
+                            </div> 
                 </div>
             </div>
-
+            
             <!--two graphs for data visualizatinos-->
             <div class="section group">
                 <div>
                     <div class="has-text-centered">
-                            <h1 class="title is-2">Updated SFPD Data</h1>
+                            <span class="icon">
+                                    <i class="fa fa-database fa-5x"></i>
+                            </span>
+                            <h1 class="title is-2">Data</h1>
                             <!--call type vs number of occurrences-->
                             <iframe  id="graph1" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/0"></iframe>
                             <iframe  id="graph2" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/3"></iframe>                
                     </div>
                 </div> 
             </div> 
+           
 
     </body>
 </html>
