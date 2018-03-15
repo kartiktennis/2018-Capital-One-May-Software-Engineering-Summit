@@ -32,7 +32,7 @@
         font-family: 'Open Sans', sans-serif;
     }
     #title-box {
-        opacity: 0.5;
+        opacity: 0.75;
         position: absolute;
         z-index: 1;
         top: 55px;
@@ -99,7 +99,7 @@
         center: [-122.4194, 37.7749]
     });
 
-    var toggleableLayerIds = [ 'medical-incident', 'structure-fires', 'alarms','miscellaneous' ]; //layer ids to toggle MUST MATCH EXACTLY!
+    var toggleableLayerIds = [ 'Medical Incidents', 'Structure Fires', 'Alarms','Miscellaneous' ]; //layer ids to toggle MUST MATCH EXACTLY!
 
     map.addControl(new MapboxGeocoder({
         accessToken: mapboxgl.accessToken
