@@ -13,11 +13,13 @@
         <!--Loaded Font Awesome Icons-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-        <!--Vue js--> 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+        <!--Vue js for modal popups--> 
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script> 
 
-        
+       
 </head>
+
+
 
 <body>
     <!--title bar of page-->
@@ -36,13 +38,18 @@
                                     <h1 class="title is-2"> <span class="icon">
                                             <i class="fa fa-map-marker"></i>
                                     </span>     Longest Dispatch Times by Zipcode</h1>
-                                    <!--zipcode for longest dispatch areas-->
+                                    <!--zipcode for longest dispatch areas--> 
+                                    <!--https://www.trulia.com/real_estate/Hayes_Valley-San_Francisco/1417/crime/--> <!--link to external data-->
                                     <div class="box level">
                                         <div class="level left">
                                                 <span class="icon">
                                                         <i class="fa fa-map-marker"></i>
                                                 </span>
                                             <h1 class="title is-5 is-spaced">Hayes Valley (94102)</h1>
+                                        </div>
+
+                                        <div class="level right">
+                                            <a href="https://www.trulia.com/real_estate/Hayes_Valley-San_Francisco/1417/crime/" class="button is-large is-outlined is-success">Real Estate Crime Data</a>
                                         </div>
                                     </div> 
                                     <br></br>
@@ -53,6 +60,10 @@
                                                 </span>
                                                 <h1 class="title is-5 is-spaced">Embarcadero South (94105)</h1>
                                             </div>
+
+                                        <div class="level right">
+                                                <a href="https://www.trulia.com/real_estate/South_San_Francisco-California/crime/" class="button is-large is-outlined is-success">Real Estate Crime Data</a>
+                                        </div>
                                     </div>
                                     <br></br>
                                     <div class="box level">
@@ -62,6 +73,10 @@
                                                 </span>
                                                 <h1 class="title is-5 is-spaced">Presidio (94129)</h1>
                                             </div>
+
+                                        <div class="level right">
+                                                <a href="https://www.trulia.com/real_estate/Presidio-San_Francisco/1454/crime/" class="button is-large is-outlined is-success">Real Estate Crime Data</a>
+                                        </div>
                                     </div> 
                             </div>
 
@@ -70,7 +85,14 @@
                                 <h1 class="title is-2"> <span class="icon">
                                         <i class="fa fa-clock"></i>
                                 </span>     We can reduce this!</h1>
-
+                                <div class="card">
+                                    <div class="card-content">
+                                        <p> THis is a description of how we can reduce the response 
+                                            times of the three areas listed to the left of this container. 
+                                        </p> 
+                                    </div>
+                                    <!--description goes here=-->
+                                </div>
 
                             </div> 
                 </div>
