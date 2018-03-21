@@ -13,9 +13,7 @@
         <!--Loaded Font Awesome Icons-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-        <!--Vue js for modal popups--> 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script> 
-
+        
 
         <!--some basic CSS styling-->
         <style> 
@@ -44,7 +42,7 @@
                                     <!--http://sanfranguide.com/zip-codes/-->
                                     <h1 class="title is-2"> <span class="icon">
                                             <i class="fa fa-map-marker"></i>
-                                    </span>     Longest Dispatch Times by Zipcode</h1>
+                                    </span>     <u>Longest Dispatch Times by Zipcode</u></h1>
                                     <!--zipcode for longest dispatch areas--> 
                                     <div class="box level">
                                         <div class="level left">
@@ -97,7 +95,8 @@
                                     <br></br>
                                     <h1 class="title is-2">     <span class="icon">
                                             <i class="fa fa-check"></i>
-                                    </span>     Check Your Area!</h1>
+                                    </span>     <u>Check Your Area!</u></h1> 
+
                                     <div class="field">
                                              <label class="is-size-3 label">Street Address</label>
                                             <div class="control has-icons-left has-icons-right">
@@ -113,9 +112,9 @@
                                           </div>
                                           
                                           <div class="field">
-                                            <label class="is-size-3 label">Zipcode</label>
+                                            <label class="is-size-3 label">Time</label>
                                             <div class="control has-icons-left has-icons-right">
-                                              <input id="zipcode" class="input is-danger" type="email" placeholder="5 digit zipcode">
+                                              <input id="time" class="input is-success" type="email" placeholder="Hrs : Min">
                                               <span class="icon is-small is-left">
                                                 <i class="fas fa-hashtag"></i>
                                               </span>
@@ -125,14 +124,16 @@
                                             </div>
                                             <!-- <p class="help is-danger">Enter valid zipcode</p> -->
                                           </div>
-                                
-                                 <script type="text/javascript" src="main.js"></script>
+
+                                <a class="button is-large is-outlined is-info">Check Area!</a>
+                                <script type="text/javascript" src="main.js"></script>
+
                             </div>
 
                             <div class="column is-centered">
                                 <h1 class="title is-2"> <span class="icon">
                                         <i class="fa fa-clock"></i>
-                                </span>     We can reduce this!</h1>
+                                </span>     <u>We can reduce this!</u></h1>
                                 <div class="box is-pulled-left">
                                     <!--description goes here-->
                                    <div class="container">
@@ -163,7 +164,7 @@
                             <span class="icon">
                                     <i class="fa fa-database fa-5x"></i>
                             </span>
-                            <h1 class="title is-2">Data</h1>
+                            <h1 class="title is-2"><u>Data</u></h1>
                             <!--call type vs number of occurrences and avg dispatch times by call type-->
                             <iframe  id="graph1" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/0"></iframe>
                             <iframe  id="graph2" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/3"></iframe>                
@@ -174,5 +175,3 @@
 
     </body>
 </html>
-
-
