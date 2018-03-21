@@ -6,6 +6,8 @@ Submission: INSERT SUBMISSION LINK WHEN DONE
 Deliverables: 
 To solve this challenge, build a web application or web page that provides:
 
+Submission: c1sfpd.surge.sh
+
 *Data Visuals:* 
 
 * Display or graph 3 metrics or trends from the data set that are interesting to you.
