@@ -16,6 +16,12 @@
         <!--Vue js for modal popups--> 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script> 
 
+        <!--some basic CSS styling-->
+        <style> 
+            body{
+                background-color:#fffafa;
+        }
+        </style> 
        
 </head>
 
@@ -122,11 +128,11 @@
                             </div>
 
                             <div class="column is-centered">
-                                <!--description goes here-->
                                 <h1 class="title is-2"> <span class="icon">
                                         <i class="fa fa-clock"></i>
                                 </span>     We can reduce this!</h1>
                                 <div class="box is-pulled-left">
+                                    <!--description goes here-->
                                    <div class="container">
                                     <p class="is-size-3"> As seen to the left, Hayes Valley, Embarcadero South, and Presidio are the areas 
                                         with the longest dispatch times. Because of this, victims of incidents in these areas are forced to wait longer
@@ -141,7 +147,6 @@
                                         guiding responders.      
                                     </p> 
                                    </div>
-                                    <!--description goes here=-->
                                 </div>
 
                             </div> 
@@ -157,7 +162,7 @@
                                     <i class="fa fa-database fa-5x"></i>
                             </span>
                             <h1 class="title is-2">Data</h1>
-                            <!--call type vs number of occurrences-->
+                            <!--call type vs number of occurrences and avg dispatch times by call type-->
                             <iframe  id="graph1" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/0"></iframe>
                             <iframe  id="graph2" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/3"></iframe>                
                     </div>
