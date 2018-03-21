@@ -1,12 +1,10 @@
 # 2018-Capital-One-May-Software-Engineering-Summit
 Project Submission for 2018 C1 Software Engineering Summit
 
-Submission: INSERT SUBMISSION LINK WHEN DONE
-
 Deliverables: 
 To solve this challenge, build a web application or web page that provides:
 
-Submission:
+Submission: 
 
 *Data Visuals:* 
 
