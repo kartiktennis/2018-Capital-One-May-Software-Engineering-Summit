@@ -23,7 +23,7 @@
 
 <body>
     <!--title bar of page-->
-                <div>
+                <div class="map">
                     <div>
                         <iframe src="toggleLayersMap.html" frameborder="0" scrolling="no" width="100%" height="800" style=" border:none; margin:0; bottom:0; overflow:hidden; z-index:999999;">
                                 Sorry, your browser does not support inline frames.
@@ -33,7 +33,7 @@
                     <div class="section group">
                          <!--use column class to divide up elements--> 
                         <div class="columns"> 
-                            <div class="column has-text-centered is-half is-fluid">
+                            <div class="column is-pulled-left is-half is-fluid">
                                     <!--http://sanfranguide.com/zip-codes/-->
                                     <h1 class="title is-2"> <span class="icon">
                                             <i class="fa fa-map-marker"></i>
@@ -45,7 +45,7 @@
                                                 <span class="icon">
                                                         <i class="fa fa-map-marker"></i>
                                                 </span>
-                                            <h1 class="title is-5 is-spaced">Hayes Valley (94102)</h1>
+                                            <h1 class="title is-3 is-spaced">Hayes Valley (94102)</h1>
                                         </div>
 
                                         <div class="level right">
@@ -58,7 +58,7 @@
                                                 <span class="icon">
                                                         <i class="fa fa-map-marker"></i>
                                                 </span>
-                                                <h1 class="title is-5 is-spaced">Embarcadero South (94105)</h1>
+                                                <h1 class="title is-3 is-spaced">Embarcadero South (94105)</h1>
                                             </div>
 
                                         <div class="level right">
@@ -71,26 +71,67 @@
                                                 <span class="icon">
                                                         <i class="fa fa-map-marker"></i>
                                                 </span>
-                                                <h1 class="title is-5 is-spaced">Presidio (94129)</h1>
+                                                <h1 class="title is-3 is-spaced">Presidio (94129)</h1>
                                             </div>
 
                                         <div class="level right">
                                                 <a href="https://www.trulia.com/real_estate/Presidio-San_Francisco/1454/crime/" class="button is-large is-outlined is-success">Real Estate Crime Data</a>
                                         </div>
                                     </div> 
+                                    <br></br>
+                                    <br></br>
+                                    <h1 class="title is-2">     <span class="icon">
+                                            <i class="fa fa-check"></i>
+                                    </span>     Check Your Area!</h1>
+                                    <div class="field">
+                                            <label class="is-size-3 label">Street Address</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                              <input class="input is-success" type="text" placeholder="Street Address">
+                                              <span class="icon is-small is-left">
+                                                <i class="fas fa-location-arrow"></i>
+                                              </span>
+                                              <span class="icon is-small is-right">
+                                                <i class="fas fa-check"></i>
+                                              </span>
+                                            </div>
+                                            <!-- <p class="help is-success">Enter valid address</p> -->
+                                          </div>
+                                          
+                                          <div class="field">
+                                            <label class="is-size-3 label">Zipcode</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                              <input class="input is-danger" type="email" placeholder="5 digit zipcode">
+                                              <span class="icon is-small is-left">
+                                                <i class="fas fa-hashtag"></i>
+                                              </span>
+                                              <span class="icon is-small is-right">
+                                                <i class="fas fa-check"></i>
+                                              </span>
+                                            </div>
+                                            <!-- <p class="help is-danger">Enter valid zipcode</p> -->
+                                          </div>
                             </div>
 
-                            <div class="column has-text-centered">
+                            <div class="column is-centered">
                                 <!--description goes here-->
                                 <h1 class="title is-2"> <span class="icon">
                                         <i class="fa fa-clock"></i>
                                 </span>     We can reduce this!</h1>
-                                <div class="card">
-                                    <div class="card-content">
-                                        <p> THis is a description of how we can reduce the response 
-                                            times of the three areas listed to the left of this container. 
-                                        </p> 
-                                    </div>
+                                <div class="box is-pulled-left">
+                                   <div class="container">
+                                    <p class="is-size-3"> As seen to the left, Hayes Valley, Embarcadero South, and Presidio are the areas 
+                                        with the longest dispatch times. Because of this, victims of incidents in these areas are forced to wait longer
+                                        for help to arrive. To combat this problem, there are a numerous measures that can be implemented by the SFPD. For example, 
+                                        lets look at <strong>Presidio</strong> and <strong>Embarcadero South</strong>. As displayed on the map, these two locations
+                                        are the farthest away from the <strong>Mission District Police Station (MDPS) </strong> (often referred to as the heart
+                                        of the city), each <i><strong>18-21 mins away</strong></i>. This is undoubtedly the most likely reason 
+                                        for the longer dispatch times. To fix this, the SFPD should establish small scale unit stations that 
+                                        are closer to these areas to lessen the distance and the time needed to respond to these incidents. For Hayes Valley, 
+                                        even though only 7 mins away from MDPS, the crowded streets lengthen the dispatch time. To lessen this, the SFPD 
+                                        should consider sectioning off some kind of main detour route that is inaccessible by civilians and solely reserved for
+                                        guiding responders.      
+                                    </p> 
+                                   </div>
                                     <!--description goes here=-->
                                 </div>
 
