@@ -19,18 +19,25 @@ function geocodeAddress(geocoder) {
         location[0]=results[0].geometry.location.lat();
         location[1]=results[0].geometry.location.lng();
 
+        if ( (location[1] > -122.36475849999999) ||
+        (location[1] < -122.5115) || (location[0] < 37.706927690000001) ||
+        (location[0] > 37.83109279) ) {
+
+          window.alert("Invalid Address! Must be in San Francisco.");
+
+         }
+
         locations_used = location; 
 
         getClosest(locations_used);
 
     } else {
-    alert('Geocode was not successful for the following reason: ' + status);
+        alert('Geocode was not successful for the following reason: ' + status);
     }
     });
 }
 
 //get closests coordinates from inputed address
 function getClosest(data) {
-    
     console.log(data);
 }
