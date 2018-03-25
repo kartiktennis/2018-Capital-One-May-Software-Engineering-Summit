@@ -95,7 +95,6 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
 
         TimesWithID.push(timeEntry); //time with id DONT SORT
 
-        
     }
 
 
@@ -201,7 +200,7 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
     console.log(type.unit); 
     console.log(type.call); 
     
-
+    
     document.getElementById("get-type").innerHTML = type.call + "(" + type.unit + ")";
 
 
