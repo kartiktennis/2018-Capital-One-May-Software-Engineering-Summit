@@ -6,30 +6,40 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>c1sfpd</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
         <!--Bulma CSS for presentability-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 
         <!--Loaded Font Awesome Icons-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
+        <!---calls main.js functionality-->
+        <script type="text/javascript" src="main.js"></script>
 
-         <!--google geocoding api-->
-         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJzvDkXp3JFQBHUvUaOjgHiKtBwxLb1_M&callback=initMap"></script>
-
-         
-         <!---calls main.js functionality-->
-         <script type="text/javascript" src="main.js"></script>
-
+        <!--google geocoding api-->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcivvAmUB20xH2e9lN7NPJ4c_KDaJjQ2w&libraries=geometry&callback=initMap"></script>
+          
          
         <!--some basic CSS styling-->
         <style> 
 
-            body{
+        body{
                 background-color:#fffafa;
-                zoom: 100%;
+                zoom:67%;
+               
         }
+        .element-group-one{
+                padding-left: 39.5px;
+                padding-right: 39.5px;
+        }
+        .box level {
+                width: 50%;
+                height: 50%;
+                min-width: 1000px;
+                min-height: 1000px;
+        }        
         </style> 
+
        
         
 </head>
@@ -45,36 +55,36 @@
                 </div>
                     <div class="section group">
                          <!--use column class to divide up elements--> 
-                        <div class="columns"> 
-                            <div class="column is-pulled-left is-half is-fluid">
-                                    <!--http://sanfranguide.com/zip-codes/-->
-                                    <h1 class="title is-2"> <span class="icon">
-                                            <i class="fa fa-map-marker"></i>
-                                    </span>     <u>Longest Dispatch Times by Zipcode</u></h1>
-                                    <!--zipcode for longest dispatch areas--> 
-                                    <div class="box level">
+                        <div class="columns is-mobile"> 
+                                <div class="column is-pulled-left is-half is-fluid">
+                                        <!--http://sanfranguide.com/zip-codes/-->
+                                        <h1 class="title is-2"> <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                        </span>     <u>Longest Dispatch Times by Zipcode</u></h1>
+                                        <!--zipcode for longest dispatch areas--> 
+                                        <div class="box level">
                                         <div class="level left">
                                                 <span class="icon">
                                                         <i class="fa fa-map-marker"></i>
                                                 </span>
-                                            <h1 class="title is-3 is-spaced">Hayes Valley (94102)</h1>
+                                                <h1 class="title is-3 is-spaced">Hayes Valley (94102)</h1>
                                         </div>
                                         <!--link to external data-->
                                         <div class="level right">
-                                            <a href="https://www.trulia.com/real_estate/Hayes_Valley-San_Francisco/1417/crime/" class="button is-large is-outlined is-success"> 
-                                            <span class="icon">
-                                                    <i class="fa fa-external-link-alt"></i>
-                                            </span> </a>
+                                                <a href="https://www.trulia.com/real_estate/Hayes_Valley-San_Francisco/1417/crime/" class="button is-large is-outlined is-success"> 
+                                                <span class="icon">
+                                                        <i class="fa fa-external-link-alt"></i>
+                                                </span> </a>
                                         </div>
-                                    </div> 
-                                    <br></br>
-                                    <div class="box level">
-                                            <div class="level left">
+                                        </div> 
+                                        <br></br>
+                                        <div class="box level">
+                                                <div class="level left">
                                                 <span class="icon">
                                                         <i class="fa fa-map-marker"></i>
                                                 </span>
-                                                <h1 class="title is-3 is-spaced">Embarcadero South (94105)</h1>
-                                            </div>
+                                                <h1 class="title is-3 is-spaced">Daly City (94105)</h1>
+                                                </div>
 
                                         <div class="level right">
                                                 <a href="https://www.trulia.com/real_estate/South_San_Francisco-California/crime/" class="button is-large is-outlined is-success">
@@ -82,15 +92,15 @@
                                                         <i class="fa fa-external-link-alt"></i>
                                                 </span></a>
                                         </div>
-                                    </div>
-                                    <br></br>
-                                    <div class="box level">
-                                            <div class="level left">
+                                        </div>
+                                        <br></br>
+                                        <div class="box level">
+                                                <div class="level left">
                                                 <span class="icon">
                                                         <i class="fa fa-map-marker"></i>
                                                 </span>
                                                 <h1 class="title is-3 is-spaced">Presidio (94129)</h1>
-                                            </div>
+                                                </div>
 
                                         <div class="level right">
                                                 <a href="https://www.trulia.com/real_estate/Presidio-San_Francisco/1454/crime/" class="button is-large is-outlined is-success">
@@ -98,90 +108,153 @@
                                                         <i class="fa fa-external-link-alt"></i>
                                                 </span> </a>
                                         </div>
-                                    </div> 
-                                    <br></br>
-                                    <br></br>
-                                    <h1 class="title is-2">     <span class="icon">
-                                            <i class="fa fa-check"></i>
-                                    </span>     <u>Check Your Area!</u></h1> 
+                                        </div> 
+                                        
+                                        <h1 class="title is-2">     <span class="icon">
+                                                <i class="fa fa-check"></i>
+                                        </span>     <u>Check Your Area!</u></h1> 
 
-                                    <div class="field">
-                                             <label class="is-size-3 label">Street Address</label>
-                                            <div class="control has-icons-left has-icons-right">
-                                              <input id="address" class="input is-success" type="text" placeholder="Street Address">
-                                              <span class="icon is-small is-left">
-                                                <i class="fas fa-location-arrow"></i>
-                                              </span>
-                                              <span class="icon is-small is-right">
-                                                <i class="fas fa-check"></i>
-                                              </span>
-                                            </div>
-                                            <!-- <p class="help is-success">Enter valid address</p> -->
-                                          </div>
-                                          
-                                          <!-- <div class="field">
-                                            <label class="is-size-3 label">Zipcode</label>
-                                            <div class="control has-icons-left has-icons-right">
-                                              <input id="zipcode" class="input is-success" type="email" placeholder="5 digit zipcode">
-                                              <span class="icon is-small is-left">
-                                                <i class="fas fa-hashtag"></i>
-                                              </span>
-                                              <span class="icon is-small is-right">
-                                                <i class="fas fa-check"></i>
-                                              </span>
-                                            </div>
-                                          </div> -->
+                                        <div class="field">
+                                                <label class="is-size-3 label">Street Address</label>
+                                                        <div class="control has-icons-left has-icons-right">
+                                                                <input id="address" class="input" type="text" placeholder="Street Address">
+                                                                <span class="icon is-small is-left">
+                                                                <i class="fas fa-location-arrow"></i>
+                                                                </span>
+                                                                <span class="icon is-small is-right">
+                                                                <i class="fas fa-check"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="field">
+                                                <label class="is-size-3 label">Date & Time</label>
+                                                        <div class="control has-icons-left has-icons-right">
+                                                                <input id="get-time" class="input" type="email" placeholder="e.g 2013-09-05 15:34:00">
+                                                                <span class="icon is-small is-left">
+                                                                <i class="fas fa-clock"></i>
+                                                                </span>
+                                                                <span class="icon is-small is-right">
+                                                                <i class="fas fa-check"></i>
+                                                                </span>
+                                                        </div>
+                                                </div> 
 
-                                          <button id="check-area" class="button is-info">Check Area</button>
+                                                <button id="check-area" class="button is-outlined is-info">Check Area</button>
 
-                            </div>
+                                                <br></br>
 
-                            <div class="column is-centered">
-                                <h1 class="title is-2"> <span class="icon">
-                                        <i class="fa fa-clock"></i>
-                                </span>     <u>We can reduce this!</u></h1>
-                                <div class="box is-pulled-left">
-                                    <!--description goes here-->
-                                   <div class="container">
-                                    <p class="is-size-3"> As seen to the left, Hayes Valley, Embarcadero South, and Presidio are the areas 
-                                        with the longest dispatch times. Because of this, victims of incidents in these areas are forced to wait longer
-                                        for help to arrive. To combat this problem, there are a numerous measures that can be implemented by the SFPD. For example, 
-                                        lets look at <strong>Presidio</strong> and <strong>Embarcadero South</strong>. As displayed on the map, these two locations
-                                        are the farthest away from the <strong>Mission District Police Station (MDPS) </strong> (often referred to as the heart
-                                        of the city), each <i><strong>18-21 mins away</strong></i>. This is undoubtedly the most likely reason 
-                                        for the longer dispatch times. To fix this, the SFPD should establish small scale unit stations that 
-                                        are closer to these areas to lessen the distance and the time needed to respond to these incidents. For Hayes Valley, 
-                                        even though only 7 mins away from MDPS, the crowded streets lengthen the dispatch time. To lessen this, the SFPD 
-                                        should consider sectioning off some kind of main detour route that is inaccessible by civilians and solely reserved for
-                                        guiding responders.      
-                                    </p> 
-                                   </div>
+                                                <article class="message is-info has-text-centered">
+                                                        <div class="message-header has-text-centered">
+                                                                <p>Call & Unit Type </p>
+                                                        </div>
+                                                        <div id="get-type" class="message-body has-text-centered">
+                                                                <strong>
+                                                                        
+                                                                </strong>
+                                                        </div>
+                                                </article>
+
                                 </div>
 
-                               
-                                <p id="displayData" class="is-size-3"></p>
-                               
-
-                            </div> 
+                        <div class="column">
+                                        <h1 class="title is-2"> <span class="icon">
+                                                <i class="fa fa-clock"></i>
+                                        </span>     <u>We can reduce this!</u></h1> <!--refer to saved text file-->
+                                        <div class="box is-pulled-left">
+                                        <!--description goes here-->
+                                        
+                                        <p class="is-size-3"> As seen to the left, Hayes Valley, Embarcadero South, and Presidio are the areas 
+                                                        with the longest dispatch times. Because of this, victims of incidents in these areas are forced to wait longer
+                                                        for help to arrive. To combat this problem, there are a numerous measures that can be implemented by the SFPD. For example, 
+                                                        lets look at <strong>Presidio</strong> and <strong>Daly City</strong>. As displayed on the map, these two locations
+                                                        are the farthest away from the <strong>Mission District Police Station (MDPS) </strong> (often referred to as the heart
+                                                        of the city), each <i><strong>18-21 mins away</strong></i>. This is undoubtedly the most likely reason 
+                                                        for the longer dispatch times. To fix this, the SFPD should establish small scale unit stations that 
+                                                        are closer to these areas to lessen the distance and the time needed to respond to these incidents. For Hayes Valley, 
+                                                        even though only 7 mins away from MDPS, the crowded streets lengthen the dispatch time. To lessen this, the SFPD 
+                                                        should consider sectioning off some kind of main detour route that is inaccessible by civilians and solely reserved for
+                                                        guiding responders.       
+                                        </p> 
+                                </div> 
+                        </div>
                 </div>
             </div>
+
+
+        <div class="element-group-one">
+            <div class="container has-text-centered">
+                <span class="icon">
+                        <i class="fa fa-forward fa-5x"></i>
+                </span>
+                <h1 class="title is-2"><u>Preparing for the future!</u></h1>
+            </div>
             <br></br>
+
+            <div class="notification">
+                      <p class="is-size-2">Due to increasing crime rates, numerous areas are experiencing an increase in dispatch 
+                              calls. The areas listed below represent the top 3 areas with the greatest increase in dispatch calls, along with 
+                              their respective required dispatch service, which turned to be overwhelmingly Medical. However, this isn't surprising 
+                              seeing as how Medical incidents accounted for almost <strong><i class=>70%</i></strong> of the entire dataset.  
+                      </p>
+                </div>
+           <br></br>
+
+            <div class="columns is-mobile">
+                <div class="column"> 
+                <div class="card has-text-centered"> 
+                        <div class="card-image">
+                                <figure class="image is-3by2">
+                                        <img src="./images/HayesValley.jpg" alt="Hayes Valley">
+                                </figure>
+                        </div>
+                        <div class="card-content">
+                                <div class="subtitle is-2">Hayes Valley (94102)</div>
+                                <p class="is-size-3">Dispatch Service: MEDIC, PRIVATE </p>
+                        </div>
+                </div>
+            </div>
+            <div class="column"> 
+                <div class="card has-text-centered"> 
+                        <div class="card-image">
+                                <figure class="image is-3by2">
+                                        <img src="./images/PolkRussion.jpg" alt"Polk/Russian Hill">
+                                </figure>
+                        </div>
+                        <div class="card-content">
+                                <div class="subtitle is-2">Polk/Russian Hill (94109)</div>
+                                <p class="is-size-3">Dispatch Service: MEDIC, PRIVATE </p>
+                        </div>
+                </div>
+            </div>
+            <div class="column"> 
+                <div class="card has-text-centered"> 
+                        <div class="card-image">
+                                <figure class="image is-3by2">
+                                        <img src="./images/Bernal.jpg" alt="Bernal Heights">
+                                </figure>
+                        </div>
+                        <div class="card-content">
+                                <div class="subtitle is-2">Bernal Heights (94110)</div>
+                                <p class="is-size-3">Dispatch Service: MEDIC, PRIVATE </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+            <br></br>
+            <hr style="height:1px;border:none;color:#333;background-color:#333;" />
             <br></br>
             <!--two graphs for data visualizatinos-->
-            <div class="section group">
+            <!--display notice about train incidents-->
+            <div class="section-group">
                 <div>
-                    <div class="has-text-centered">
-                            <span class="icon">
-                                    <i class="fa fa-database fa-5x"></i>
-                            </span>
-                            <h1 class="title is-2"><u>Data</u></h1>
-                            <!--call type vs number of occurrences and avg dispatch times by call type-->
-                            <iframe  id="graph1" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/0"></iframe>
-                            <iframe  id="graph2" width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~kartiktennis/3"></iframe>                
+                    <div>
+                            <iframe  id="graph1" width="1000" height="1000" frameborder="0" scrolling="no" src="pieChart.html"></iframe>
+                            <iframe  id="graph1" width="1000" height="1000" frameborder="0" scrolling="no" src="donutChart.html"></iframe>
+
                     </div>
                 </div> 
-            </div> 
-           
-
+        </div>
     </body>
 </html>
