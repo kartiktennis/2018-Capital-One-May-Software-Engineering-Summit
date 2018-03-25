@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2", 
+    exportEnabled: true,
+    backgroundColor: "transparent",
+	title:{
+		text: "Call Type vs Number of Occurrences",
+        horizontalAlign: "center"
+
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+		    { y: 6791, label: "Medical Incident" },
+            { y: 1061, label: "Alarms" },
+            { y: 1029, label: "Structure Fire" },
+            { y: 410, label: "Traffic Collision" },
+            { y: 114, label: "Citizen Assist" },
+            { y: 86, label: "Gas Leak" },
+            { y: 55, label: "Train/Rail" },
+            { y: 10, label: "Odor" },
+            { y: 15, label: "Smoke Investigation" },
+            { y: 21, label: "Electrical Hazard" },
+            { y: 54, label: "Water Rescue" },
+            { y: 3, label: "HazMat" },
+            { y: 144, label: "Outside Fire" },
+            { y: 45, label: "Vehicle Fire" },
+            { y: 23, label: "Elevator / Escalator Rescue" },
+            { y: 10, label: "Fuel Spill" },
+            { y: 129, label: "Other" },
+
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 290px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

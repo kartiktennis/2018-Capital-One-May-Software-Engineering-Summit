@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2", 
+	backgroundColor: "transparent",
+	exportEnabled: true,
+	animationEnabled: true,
+	title: {
+		text: "Average Dispatch time vs Call Type"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 25,
+		toolTipContent: "<b>{label}</b>: {y}%",
+		indexLabelFontSize: 12,
+		indexLabel: "{label} - {y}%",
+		dataPoints: [
+			{ y: 0.75297, label: "Medical Incident" },
+			{ y: 2.2574, label: "Alarms" },
+			{ y: 34.4834, label: "Structure Fire" },
+			{ y: 2.2945, label: "Traffic Collision" },
+			{ y: 9.5926, label: "Citizen Assist" },
+			{ y: 1.7009, label: "Gas Leak" },
+            { y: 2.6144, label: "Odor" },
+            { y: 2.3471, label: "Smoke Investigation" },
+            { y: 0.5784, label: "Electrical Hazard" },
+            { y: 27.3833, label: "Water Rescue" },
+            { y: 4.0667, label: "HazMat" },
+            { y: 2.8729, label: "Outside Fire" },
+            { y: 2.3512, label: "Vehicle Fire" },
+            { y: 2.1190, label: "Elevator / Escalator Rescue" },
+            { y: 0.5692, label: "Fuel Spill" },
+            { y: 3.71319, label: "Other" },
+
+		]
+	}]
+});
+chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 290px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
