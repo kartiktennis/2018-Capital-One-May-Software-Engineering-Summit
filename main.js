@@ -96,15 +96,13 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
     for (i = 0; i < 10000; i++) {
 
         //Format to follow for unix time conversion: Math.round(new Date("2013/09/05 15:34:00").getTime()/1000)        
-        var unixTime = Math.round(new Date (unixJSON['received_timestamp'][i]).getTime()/1000); //place unix time in array with row id
+        var unixTime = Math.round(new Date (unixJSON['received_timestamp'][i]).getTime()/1000); //place unix time 
 
         var timeEntry = {row_id: unixJSON['row_id'][i], unixTime: unixTime};
 
         TimesWithID.push(timeEntry); //time with id DONT SORT
 
     }
-
-
 
     var distanceListMap = [];
    
