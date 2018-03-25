@@ -5,8 +5,9 @@
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>c1sfpd</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="HandheldFriendly" content="True" />
+
         <!--Bulma CSS for presentability-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 
@@ -137,40 +138,57 @@
                                                 <button id="check-area" class="button is-outlined is-info">Check Area</button>
 
                                                 <br></br>
-
-                                                <article class="message is-info has-text-centered">
-                                                        <div class="message-header has-text-centered">
-                                                                <p>Call & Unit Type </p>
-                                                        </div>
-                                                        <div id="get-type" class=" is-size-3 message-body has-text-centered">
-                                                                <strong>
-
-                                                                </strong>
-                                                        </div>
-                                                </article>
-
                                 </div>
 
                         <div class="column">
                                         <h1 class="title is-2"> <span class="icon">
                                                 <i class="fa fa-clock"></i>
                                         </span>     <u>We can reduce this!</u></h1> <!--refer to saved text file-->
-                                        <div class="box is-pulled-left">
-                                        <!--description goes here-->
+
+
+                                        <div class="box level"> 
+                                              
+                                                <p class="is-size-4">Twin Peaks West (94127) was seen to have the longest dispatch time 
+                                                        out of all the zipcodes in the dataset. In fact, SFPD has already decided 
+                                                        to increase patrols in this area after <i><a href="http://abc7news.com/news/sfpd-to-increase-patrols-at-twin-peaks-after-fatal-shooting/2229726/">
+                                                        a person was fatally shot in the area.</a></i>i To reduce reponse times for incidents like this, 
+                                                        SFPD should have more units in this area, as it is known to be a crime heavy location. 
+                                                </p>
+                                                
+                                        </div>
+                                        <div class="box level"> 
+                                                <p class="is-size-4">Lengthy response times in Daly City may largely be due to the fact that there doesnt seem 
+                                                        to be a centrally located SFPD station for incidents within the area. In fact, one of the main 
+                                                        SFPD stations in San Francisco is the <strong><i>Mission District Police Station (MDPS)</i></strong>. Daly City is <strong>
+                                                                <i>18-21 mins away.</i>
+                                                        </strong> This most likely serves as the main cause for long response times, which can be mitigated by
+                                                        establishing a central station in the Daly City area. 
+                                 
+                                                </p>
                                         
-                                        <p class="is-size-3"> As seen to the left, Hayes Valley, Embarcadero South, and Presidio are the areas 
-                                                        with the longest dispatch times. Because of this, victims of incidents in these areas are forced to wait longer
-                                                        for help to arrive. To combat this problem, there are a numerous measures that can be implemented by the SFPD. For example, 
-                                                        lets look at <strong>Presidio</strong> and <strong>Daly City</strong>. As displayed on the map, these two locations
-                                                        are the farthest away from the <strong>Mission District Police Station (MDPS) </strong> (often referred to as the heart
-                                                        of the city), each <i><strong>18-21 mins away</strong></i>. This is undoubtedly the most likely reason 
-                                                        for the longer dispatch times. To fix this, the SFPD should establish small scale unit stations that 
-                                                        are closer to these areas to lessen the distance and the time needed to respond to these incidents. For Hayes Valley, 
-                                                        even though only 7 mins away from MDPS, the crowded streets lengthen the dispatch time. To lessen this, the SFPD 
-                                                        should consider sectioning off some kind of main detour route that is inaccessible by civilians and solely reserved for
-                                                        guiding responders.       
-                                        </p> 
-                                </div> 
+                                        </div>
+                                        <div class="box level"> 
+                                                
+                                                <p class="is-size-4">Again,  we see here that Presidio is fairly distant from the MDPS. In fact, 
+                                                        the closest police station to the Presidio area is the <strong><i>Northern District Police Station (NDPS)</i></strong>, which is still 
+                                                        <strong>
+                                                                <i> 15 mins away.</i>
+                                                        </strong>. The same solution from above can be applied to mitigate reponse times here, that is, placing a
+                                                        more central station the patrol the Presidio Area. Additionally, the above map provides a visualization of
+                                                        how far from the NDPS and MDPS Presidio is. 
+                                                </p>
+                                        
+                                        </div>
+                                        <article class="message is-info has-text-centered">
+                                                <div class="message-header has-text-centered">
+                                                        <p>Call & Unit Type </p>
+                                                </div>
+                                                <div id="get-type" class="is-size-3 message-body has-text-centered">
+                                                        <strong>
+
+                                                        </strong>
+                                                </div>
+                                        </article>
                         </div>
                 </div>
             </div>
@@ -242,11 +260,13 @@
             <!--two graphs for data visualizatinos-->
             <!--display notice about train incidents-->
             <div class="section-group">
-                <div>
-                    <div>
+                <div class="columns">
+                    <div class="column">
                             <iframe  id="graph1" width="1000" height="1000" frameborder="0" scrolling="no" src="pieChart.html"></iframe>
-                            <iframe  id="graph1" width="1000" height="1000" frameborder="0" scrolling="no" src="donutChart.html"></iframe>
 
+                    </div>
+                    <div class="column">
+                        <iframe  id="graph1" width="1000" height="1000" frameborder="0" scrolling="no" src="donutChart.html"></iframe>
                     </div>
                 </div> 
         </div>
