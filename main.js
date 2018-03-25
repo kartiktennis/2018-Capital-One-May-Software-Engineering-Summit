@@ -74,21 +74,28 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
     
     });
 
-
     //converts timestamp string to unix time and stores in JSON file
-
 
     //converts inputed time to unix time
     inputTime.userInputUnixtime =  Math.round(new Date (time_data).getTime()/1000);
+
+    var invalidTime = false; 
+    
+    if (isNaN(inputTime.userInputUnixtime) || time_data.length <= 10) {
+        invalidTime = true; 
+        document.getElementById("get-type").innerHTML = ""; 
+        alert("Invalid Time, Please enter in correct format");
+    }
+
     console.log(inputTime.userInputUnixtime); 
 
     //console.log(userInputUnixtime);
 
     var TimesWithID = []; 
+
     for (i = 0; i < 10000; i++) {
 
-        //Format to follow for unix time conversion: Math.round(new Date("2013/09/05 15:34:00").getTime()/1000)
-
+        //Format to follow for unix time conversion: Math.round(new Date("2013/09/05 15:34:00").getTime()/1000)        
         var unixTime = Math.round(new Date (unixJSON['received_timestamp'][i]).getTime()/1000); //place unix time in array with row id
 
         var timeEntry = {row_id: unixJSON['row_id'][i], unixTime: unixTime};
@@ -117,7 +124,8 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
         // console.log(longFromJSON);
 
         for (i =1; i<6; i++){
-            var distance = Math.pow(Math.pow((latFromJSON[i] - addressHolder.latitude),2) + Math.pow((longFromJSON[i] - addressHolder.longitude),2),.5) //distance formula calculations
+            var distance = Math.acos(Math.sin(addressHolder.latitude) * Math.sin(latFromJSON[i]) + Math.cos(addressHolder.latitude) * Math.cos(latFromJSON[i]) * Math.cos(addressHolder.longitude - longFromJSON[i])); //distance formula considering curvature of Earth
+            //var distance = Math.pow(Math.pow((latFromJSON[i] - addressHolder.latitude),2) + Math.pow((longFromJSON[i] - addressHolder.longitude),2),.5) //distance formula calculations
             var closeEntry = {distance: distance, row_id: coordsJSON['row_id'][i]};
             closestDistance.push(closeEntry);
         }
@@ -125,7 +133,7 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
         closestDistance.sort(sortFunction); //sorts the array based on distance
 
         for ( i =6; i<10000; i++){
-            var NewDistance = Math.pow(Math.pow((latFromJSON[i] - addressHolder.latitude),2) + Math.pow((longFromJSON[i] - addressHolder.longitude),2),.5)
+            var NewDistance = Math.acos(Math.sin(addressHolder.latitude) * Math.sin(latFromJSON[i]) + Math.cos(addressHolder.latitude) * Math.cos(latFromJSON[i]) * Math.cos(addressHolder.longitude - longFromJSON[i])); //distance formula considering curvature of Earth
             if (NewDistance < closestDistance[closestDistance.length-1].distance){ // checking if there are other closer points
                 closestDistance.splice(-1); //remove the last point
                 var newEntry = {distance: NewDistance, row_id: coordsJSON['row_id'][i]};
@@ -158,29 +166,6 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
     // console.log(finalClosestIncidents[0].row_id); 
     //console.log(finalClosestIncidents);
     
-    var checkClosestTime = [];
-    //find closest based on time
-
-    // checkClosestTime.push(finalClosestIncidents[0].time);
-    // console.log(userInputUnixtime);
-    // checkClosestTime.sort(sortFunctionTime);  
-    // for (i =1; i< 4; i++) {
-    //     if (finalClosestIncidents[i].time < checkClosestTime[checkClosestTime.length-1]) {
-    //         var correctTime = finalClosestIncidents[i].time;
-    //         //magicIndex.index = i; 
-    //         checkClosestTime.splice(-1); 
-    //         checkClosestTime.push(correctTime); 
-    //         checkClosestTime.sort(sortFunctionTime); 
-    //     }
-    // }
-
-
-    //console.log(checkClosestTime[0]);//closest time value
-
-   // console.log(magicIndex.index);
-
-
-
     var finalJSON = null; 
 
     readTextFile("./data/finalJSON", function(text){
@@ -197,18 +182,17 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
         }
     }
 
-    console.log(type.unit); 
-    console.log(type.call); 
+    // console.log(type.unit); 
+    // console.log(type.call); 
     
-    
-    document.getElementById("get-type").innerHTML = type.call + "(" + type.unit + ")";
+    if (invalidTime != true) {
+        document.getElementById("get-type").innerHTML = type.call + "(" + type.unit + ")";
+    }
 
 
 }
 
-
-
-
+//relevant sort functions to sort listMaps by distance and time
 function sortFunctionTime (a, b) {
     if (a.unixTime === inputTime.userInputUnixtime) {
         return 0;
