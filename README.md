@@ -10,11 +10,11 @@ Submission: https://c1sfpd.surge.sh/
 ![Screenshot of sfpd-dispatch](screenshot.png)
 
 # Table of Contents
-* [What did I use?](#built-with)
-* [All Objectives](#objectives)
-    * [The Main Objectives](#main-objectives)
-    * [The Bonus Objectives](#bonus-objectives)
-* [My Approach](#how-objectives-were-completed)
+* [What did I use?](#i-used)
+* [All Objectives](#all-objectives)
+    * [The Main Objectives](#the-main-objectives)
+    * [The Bonus Objectives](#the-bonus-objectives)
+* [My Approach](#my-approach)
 
 
 # I Used...
@@ -25,14 +25,14 @@ Submission: https://c1sfpd.surge.sh/
 * [Google Maps Geocoding API](https://developers.google.com/maps/documentation/javascript/geocoding) for geographic functionality
 * [Mapbox Studio and API](https://www.mapbox.com/developers/) for geographical data visualization
 
-# Objectives 
+# All Objectives 
 
-### Main Objectives
+### The Main Objectives
 - **Visualize the data**: Display or graph 3 metrics or trends from the data set that are interesting to you.
 - **Incident Prediction**: Given an address and time, what is the most likely dispatch to be required?
 - **Longest Dispatch times**: Which areas take the longest time to dispatch to on average? How can this be reduced? 
 
-### Bonus Objectives
+### The Bonus Objectives
 - **Heat Maps**: Add heat maps that show dispatch frequency, urgency over the city.
 - **Crime Correlation**: Based on the type of dispatch and the frequency of dispatch, show the most calm and safe neighborhoods in the city
 - **Preparing for the future**:  Which areas are experiencing the greatest increase in dispatch calls? Where and what type of dispatch service would you place to help with the rate of increasing calls?
