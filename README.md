@@ -5,7 +5,7 @@
 
 Challenge: https://www.mindsumo.com/contests/sfpd-dispatch
 
-Submission: https://github.com/kartiktennis/sfpd-dispatch
+Submission: https://c1sfpd.surge.sh/
 
 ![Screenshot of sfpd-dispatch](screenshot.png)
 
@@ -17,7 +17,7 @@ Submission: https://github.com/kartiktennis/sfpd-dispatch
 * [My Approach](#how-objectives-were-completed)
 
 
-# Built With...
+# I Used...
 * HTML, CSS, JavaScript, Python, iPython notebook
 * [Bulma 0.6.0](https://bulma.io/) for presentability
 * [Pandas 0.22.0](https://pandas.pydata.org/) for CSV data processing and calculations in Jupyter Notebook
