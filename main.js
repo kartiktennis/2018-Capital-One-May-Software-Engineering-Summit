@@ -74,7 +74,6 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
     
     });
 
-    //converts timestamp string to unix time and stores in JSON file
 
     //converts inputed time to unix time
     inputTime.userInputUnixtime =  Math.round(new Date (time_data).getTime()/1000);
@@ -87,14 +86,11 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
         alert("Invalid Time, Please enter in correct format");
     }
 
-    console.log(inputTime.userInputUnixtime); 
-
-    //console.log(userInputUnixtime);
-
     var TimesWithID = []; 
 
     for (i = 0; i < 10000; i++) {
 
+        //converts timestamp string to unix time and stores in JSON file
         //Format to follow for unix time conversion: Math.round(new Date("2013/09/05 15:34:00").getTime()/1000)        
         var unixTime = Math.round(new Date (unixJSON['received_timestamp'][i]).getTime()/1000); //place unix time 
 
@@ -111,8 +107,6 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
     var latFromJSON = []; 
     var longFromJSON = []; 
     var closestDistance = []
-     for (i = 0; i <10000; i++) {
-
 
         for (i = 0; i < 10000; i++) {
             latFromJSON.push(parseFloat(coordsJSON['latitude'][i]));
@@ -128,6 +122,7 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
             closestDistance.push(closeEntry);
         }
 
+
         closestDistance.sort(sortFunction); //sorts the array based on distance
 
         for ( i =6; i<10000; i++){
@@ -139,30 +134,30 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
                 closestDistance.sort(sortFunction); //sort the array
             }
         }
-
         //console.log(closestDistance);
 
-    }
-
-
     var finalClosestIncidents = []; 
+
+    //pushes row_id and unix time
     for (i = 0; i < 10000; i++) {
         if (TimesWithID[i].row_id === closestDistance[0].row_id || TimesWithID[i].row_id === closestDistance[1].row_id ||
             TimesWithID[i].row_id === closestDistance[2].row_id || TimesWithID[i].row_id === closestDistance[3].row_id ||
             TimesWithID[i].row_id === closestDistance[4].row_id) {
-            var entry = {row_id: TimesWithID[i].row_id, time: TimesWithID[i].unixTime};
+            var entry = {row_id: TimesWithID[i].row_id, time: TimesWithID[i].unixTime}; //contains unix time
             finalClosestIncidents.push(entry);
         }
        
     }
 
+    console.log(finalClosestIncidents); 
+
+    for (i=0; i < 5; i++) {
+        finalClosestIncidents[i].time = Math.abs(inputTime.userInputUnixtime - finalClosestIncidents[i].time); 
+    }
+    //sorts the listMap by time difference
     finalClosestIncidents.sort(sortFunctionTime); 
-    // console.log(finalClosestIncidents);
 
-
-    //get first one - sorted by difference with user inputed time
-    // console.log(finalClosestIncidents[0].row_id); 
-    //console.log(finalClosestIncidents);
+    //gets final answer here
     
     var finalJSON = null; 
 
@@ -171,7 +166,6 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
 
     });
 
-    console.log(typeof finalClosestIncidents[0].row_id); 
 
     for (i = 0; i < 10000; i++) {
         if (finalJSON['row_id'][i] === finalClosestIncidents[0].row_id) {
@@ -180,11 +174,15 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
         }
     }
 
+
+
     // console.log(type.unit); 
     // console.log(type.call); 
     
     if (invalidTime != true) {
         document.getElementById("get-type").innerHTML = type.call + "(" + type.unit + ")";
+        setTimeout(function(){document.getElementById("get-type").innerHTML = "";}, 3000);
+
     }
 
 
@@ -192,11 +190,11 @@ function getClosest(latitude, longitude, time_data) {//array of 2 elements (lat 
 
 //relevant sort functions to sort listMaps by distance and time
 function sortFunctionTime (a, b) {
-    if (a.unixTime === inputTime.userInputUnixtime) {
+    if (a.time == b.time) {
         return 0;
     }
     else {
-        return (Math.abs(a.unixTime - inputTime.userInputUnixtime));
+        return (a.time < b.time) ? -1 : 1;    
     }
 }
 function sortFunction(a, b) {
