@@ -38,7 +38,8 @@ Created 2 graphs with Canvasjs:
     * Three call types (Structure Fires, Water Rescues, and Train/Rail Incidents had the greatest avg dispatch times)
 * **Call Type vs Number of Occurrences**
     * Medical Incidents were the dominant type by far, accounting for almost 70% of the calls in the dataset
-Created geographical map of incident locations usig Mapbox API
+
+Created geographical map of incident locations usig Mapbox API:
 * **Incident Map**
     * Medical Incidents, Structure Fires, and Alarms accounted for the majority of the dataset as seen on the map. All other types were grouped into a Miscellaneous category
 
@@ -51,6 +52,9 @@ Structure Fires, Water Rescues, and Train Rail incidents, but then later examine
 
 ### **Preparing for the future**: Which areas are experiencing the greatest increase in dispatch calls? Where and what type of dispatch service would you place to help with the rate of increasing calls?
 Identified the top 3 neighborhoods with greatest increase in dispatch calls by examining for each zipcode, the (number of calls on last day)- (number of calls on first day) / 12. This gave me the 'slope' or derivative value for each zipcode. I took the 3 greatest values and then found which incident was most common for each of the three zipcodes. This turned out to be Medical for all of them. 
+
+# FYI
+View csv data analysis at https://github.com/kartiktennis/sfpd-dispatch/blob/master/data/additionaldata.ipynb and https://github.com/kartiktennis/sfpd-dispatch/blob/master/data/managedata.ipynb
 
 # Check out the project yourself!
 
