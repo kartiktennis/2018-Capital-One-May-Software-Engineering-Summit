@@ -1,5 +1,5 @@
 
-# 2018 Capital One Software Engineering Summit 
+# 2018 Capital One Summer SWE Summit 
 #### built by [Kartik Krishnan](https://github.com/kartiktennis)
 
 
@@ -39,7 +39,7 @@ Created 2 graphs with Canvasjs:
 * **Call Type vs Number of Occurrences**
     * Medical Incidents were the dominant type by far, accounting for almost 70% of the calls in the dataset
 
-Created geographical map of incident locations usig Mapbox API:
+Created geographical map of incident locations using Mapbox Studio and API:
 * **Incident Map**
     * Medical Incidents, Structure Fires, and Alarms accounted for the majority of the dataset as seen on the map. All other types were grouped into a Miscellaneous category
 
