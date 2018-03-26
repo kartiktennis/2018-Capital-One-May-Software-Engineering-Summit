@@ -14,7 +14,7 @@ Submission: https://github.com/kartiktennis/sfpd-dispatch
 * [All Objectives](#objectives)
     * [The Main Objectives](#main-objectives)
     * [The Bonus Objectives](#bonus-objectives)
-* [How Objectives Were Completed](#how-objectives-were-completed)
+* [My Approach](#how-objectives-were-completed)
 
 
 # Built With...
@@ -37,7 +37,7 @@ Submission: https://github.com/kartiktennis/sfpd-dispatch
 - **Crime Correlation**: Based on the type of dispatch and the frequency of dispatch, show the most calm and safe neighborhoods in the city
 - **Preparing for the future**:  Which areas are experiencing the greatest increase in dispatch calls? Where and what type of dispatch service would you place to help with the rate of increasing calls?
 
-# How objectives were completed
+# My Approach
 
 ### **Visualizing the data**: Graph some (any 3) interesting metrics, maps, or trends from the dataset.
 Created 2 graphs with Canvasjs:
