@@ -9,13 +9,6 @@ Submission: https://c1sfpd.surge.sh/
 
 ![Screenshot of sfpd-dispatch](screenshot.png)
 
-# Table of Contents
-* [What did I use?](#i-used)
-* [All Objectives](#all-objectives)
-    * [The Main Objectives](#the-main-objectives)
-    * [The Bonus Objectives](#the-bonus-objectives)
-* [My Approach](#my-approach)
-
 
 # I Used...
 * HTML, CSS, JavaScript, Python, iPython notebook
