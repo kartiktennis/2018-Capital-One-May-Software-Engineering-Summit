@@ -38,7 +38,7 @@
                 height: 50%;
                 min-width: 1000px;
                 min-height: 1000px;
-        }        
+        }
         </style> 
 
        
@@ -260,16 +260,25 @@
             <br></br>
             <!--two graphs for data visualizatinos-->
             <!--display notice about train incidents-->
+            
             <div class="section-group">
                 <div class="columns">
                     <div class="column">
-                            <iframe  id="graph1" width="1000" height="1000" frameborder="0" scrolling="no" src="pieChart.html"></iframe>
-
-                    </div>
+                            <iframe  id="graph1" width="1000" height="500" frameborder="0" scrolling="no" src="pieChart.html"></iframe>
+                        <div id = "footer-box" class="box">
+                                <p>
+                                You may notice that Train /  Rail incidents aren't included in this graph. This is because they obscured the other
+                                data so much in the pie chart that you couldn't see the other data. Train / Rail incidents actually have the greatest
+                                avg dispatch time, accounting for <strong><i>79.7% of the total avg dispatch time for all call types</i></strong>
+                                </p> 
+                        </div>
+                    </div>       
                     <div class="column">
                         <iframe  id="graph1" width="1000" height="1000" frameborder="0" scrolling="no" src="donutChart.html"></iframe>
                     </div>
                 </div> 
+                       
+
         </div>
     </body>
 </html>
